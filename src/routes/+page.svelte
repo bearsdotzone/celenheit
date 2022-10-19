@@ -13,7 +13,6 @@
 	<label for="celenheit">Celenheit</label>
 	<input
 		inputmode="numeric"
-		pattern="[0-9]*"
 		name="celenheit"
 		type="number"
 		bind:value={ch}
@@ -27,7 +26,6 @@
 	<label for="celsius">Celsius</label>
 	<input
 		inputmode="numeric"
-		pattern="[0-9]*"
 		name="celsius"
 		type="number"
 		bind:value={c}
@@ -41,7 +39,6 @@
 	<label for="fahrenheit">Fahrenheit</label>
 	<input
 		inputmode="numeric"
-		pattern="[0-9]*"
 		name="fahrenheit"
 		type="number"
 		bind:value={f}
