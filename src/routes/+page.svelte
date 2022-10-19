@@ -1,15 +1,11 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
-
 	let ch = 0;
 	let c = 0;
 	let f = 32;
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Celenheit Calculator</title>
 	<meta name="description" content="Celenheit Calculator" />
 </svelte:head>
 
