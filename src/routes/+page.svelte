@@ -2,6 +2,10 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+
+	let ch = 0;
+	let c = 0;
+	let f = 32;
 </script>
 
 <svelte:head>
@@ -9,51 +13,47 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<span>
+	<label for="celenheit">Celenheit</label>
+	<input
+		name="celenheit"
+		type="number"
+		bind:value={ch}
+		on:change={(e) => {
+			c = Number((ch / (45 / 17)).toFixed(1));
+			f = Number((ch / (25 / 17) + 32).toFixed(0));
+		}}
+	/>
+</span>
+<span>
+	<label for="celsius">Celsius</label>
+	<input
+		name="celsius"
+		type="number"
+		bind:value={c}
+		on:change={(e) => {
+			ch = Number((c * (45 / 17)).toFixed(1));
+			f = Number((c * 1.8 + 32).toFixed(0));
+		}}
+	/>
+</span>
+<span>
+	<label for="fahrenheit">Fahrenheit</label>
+	<input
+		name="fahrenheit"
+		type="number"
+		bind:value={f}
+		on:change={(e) => {
+			ch = Number(((f - 32) * (25 / 17)).toFixed(1));
+			c = Number(((f - 32) / 1.8).toFixed(1));
+		}}
+	/>
+</span>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	span {
+		margin: 2px;
+		padding: 2px;
+		text-align: center;
 	}
 </style>
