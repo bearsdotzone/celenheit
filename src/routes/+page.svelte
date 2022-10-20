@@ -17,10 +17,15 @@
 
 <div class="box">
 	<label for="celenheit"
-		>Celenheit (Ch or <span on:keypress={() => ramCopy()} on:click={() => ramCopy()}>🐏</span
+		>Celenheit (Ch or <span
+			role="button"
+			tabindex="0"
+			on:keypress={() => ramCopy()}
+			on:click={() => ramCopy()}>🐏</span
 		>)</label
 	>
 	<input
+		id="celenheit"
 		name="celenheit"
 		type="number"
 		bind:value={ch}
@@ -35,6 +40,7 @@
 	<input
 		name="celsius"
 		type="number"
+		id="celsius"
 		bind:value={c}
 		on:change={(e) => {
 			ch = Number((c * (45 / 17)).toFixed(1));
@@ -47,6 +53,7 @@
 	<input
 		name="fahrenheit"
 		type="number"
+		id="fahrenheit"
 		bind:value={f}
 		on:change={(e) => {
 			ch = Number(((f - 32) * (25 / 17)).toFixed(1));
@@ -60,7 +67,7 @@
 <style>
 	.box {
 		padding: 2px;
-		text-align: center;
+		text-align: right;
 		width: 22rem;
 		display: flex;
 		align-items: center;
@@ -72,6 +79,7 @@
 
 	label {
 		flex: 2;
+		padding-right: 2rem;
 	}
 
 	input {
