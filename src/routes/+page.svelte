@@ -12,7 +12,6 @@
 <span>
 	<label for="celenheit">Celenheit</label>
 	<input
-		inputmode="numeric"
 		name="celenheit"
 		type="number"
 		bind:value={ch}
@@ -25,7 +24,6 @@
 <span>
 	<label for="celsius">Celsius</label>
 	<input
-		inputmode="numeric"
 		name="celsius"
 		type="number"
 		bind:value={c}
@@ -38,7 +36,6 @@
 <span>
 	<label for="fahrenheit">Fahrenheit</label>
 	<input
-		inputmode="numeric"
 		name="fahrenheit"
 		type="number"
 		bind:value={f}
