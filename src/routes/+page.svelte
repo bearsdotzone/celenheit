@@ -59,24 +59,26 @@
 
 <style>
 	.box {
-		margin: 2px;
 		padding: 2px;
 		text-align: center;
-		width: 27rem;
+		width: 22rem;
 		display: flex;
 		align-items: center;
 		align-content: space-between;
 		font-weight: bold;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 
 	label {
-		flex: 1;
+		flex: 2;
 	}
 
 	input {
 		flex-grow: 0;
+		max-width: 5rem;
 		font-size: 24px;
-		width: 10rem;
+		width: 5rem;
 		font-family: 'Times New Roman', Times, serif;
 	}
 </style>
