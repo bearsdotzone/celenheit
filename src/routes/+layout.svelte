@@ -5,16 +5,25 @@
 
 <!-- <Header /> -->
 
-<main>
-	<slot />
-</main>
+<body>
+	<main>
+		<slot />
+	</main>
+</body>
 
 <style>
 	main {
 		margin: 2px;
 		display: flex;
-		max-width: 100vw;
+		min-width: 100vw;
 		flex-direction: column;
 		min-height: 100vh;
+		align-items: center;
+		font-size: 24px;
+	}
+
+	body {
+		background-color: #dc81a3;
+		color: #1c2833;
 	}
 </style>

@@ -1,7 +1,11 @@
-<script>
+<script lang="ts">
 	let ch = 0;
 	let c = 0;
 	let f = 32;
+
+	const ramCopy = async () => {
+		await navigator.clipboard.writeText('🐏');
+	};
 </script>
 
 <svelte:head>
@@ -9,8 +13,13 @@
 	<meta name="description" content="Celenheit Calculator" />
 </svelte:head>
 
-<span>
-	<label for="celenheit">Celenheit</label>
+<h2>Celenheit Calculator</h2>
+
+<div class="box">
+	<label for="celenheit"
+		>Celenheit (Ch or <span on:keypress={() => ramCopy()} on:click={() => ramCopy()}>🐏</span
+		>)</label
+	>
 	<input
 		name="celenheit"
 		type="number"
@@ -20,9 +29,9 @@
 			f = Number((ch / (25 / 17) + 32).toFixed(0));
 		}}
 	/>
-</span>
-<span>
-	<label for="celsius">Celsius</label>
+</div>
+<div class="box">
+	<label for="celsius">Celsius (°C)</label>
 	<input
 		name="celsius"
 		type="number"
@@ -32,9 +41,9 @@
 			f = Number((c * 1.8 + 32).toFixed(0));
 		}}
 	/>
-</span>
-<span>
-	<label for="fahrenheit">Fahrenheit</label>
+</div>
+<div class="box">
+	<label for="fahrenheit">Fahrenheit (°F)</label>
 	<input
 		name="fahrenheit"
 		type="number"
@@ -44,12 +53,30 @@
 			c = Number(((f - 32) / 1.8).toFixed(1));
 		}}
 	/>
-</span>
+</div>
+
+<p>Click the ram to copy it to your clipboard.</p>
 
 <style>
-	span {
+	.box {
 		margin: 2px;
 		padding: 2px;
 		text-align: center;
+		width: 27rem;
+		display: flex;
+		align-items: center;
+		align-content: space-between;
+		font-weight: bold;
+	}
+
+	label {
+		flex: 1;
+	}
+
+	input {
+		flex-grow: 0;
+		font-size: 24px;
+		width: 10rem;
+		font-family: 'Times New Roman', Times, serif;
 	}
 </style>
