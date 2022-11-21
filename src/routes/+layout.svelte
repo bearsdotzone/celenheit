@@ -4,6 +4,12 @@
 </script>
 
 <!-- <Header /> -->
+<svelte:head>
+	<meta name="twitter:image" content="/celenheit/favicon.png" />
+	<meta name="apple-touch-icon" content="/celenheit/favicon.png" />
+	<title>Celenheit Calculator</title>
+	<meta name="description" content="Celenheit Calculator" />
+</svelte:head>
 
 <main>
 	<slot />

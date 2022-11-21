@@ -8,11 +8,6 @@
 	};
 </script>
 
-<svelte:head>
-	<title>Celenheit Calculator</title>
-	<meta name="description" content="Celenheit Calculator" />
-</svelte:head>
-
 <h2>Celenheit Calculator</h2>
 
 <div class="box">
