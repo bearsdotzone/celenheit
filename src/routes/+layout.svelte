@@ -4,12 +4,12 @@
 </script>
 
 <!-- <Header /> -->
-<head>
+<svelte:head>
 	<meta name="twitter:image" content="/celenheit/favicon.png" />
 	<link rel="apple-touch-icon" href="/celenheit/favicon.png" />
 	<title>Celenheit Calculator</title>
 	<meta name="description" content="Celenheit Calculator" />
-</head>
+</svelte:head>
 
 <main>
 	<slot />
