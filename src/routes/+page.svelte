@@ -13,6 +13,7 @@
 <div class="box">
 	<label for="celenheit"
 		>Celenheit (Ch or <span
+				style="cursor: pointer;"
 			role="button"
 			tabindex="0"
 			on:keypress={() => ramCopy()}
