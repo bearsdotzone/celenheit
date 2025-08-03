@@ -26,7 +26,7 @@
 			name="celenheit"
 			type="number"
 			bind:value={ch}
-			on:change={(e) => {
+			on:keyup={(e) => {
 				c = Number((ch / (45 / 17)).toFixed(1));
 				f = Number((ch / (25 / 17) + 32).toFixed(0));
 			}}
@@ -39,7 +39,7 @@
 			type="number"
 			id="celsius"
 			bind:value={c}
-			on:change={(e) => {
+			on:keyup={(e) => {
 				ch = Number((c * (45 / 17)).toFixed(1));
 				f = Number((c * 1.8 + 32).toFixed(0));
 			}}
@@ -52,7 +52,7 @@
 			type="number"
 			id="fahrenheit"
 			bind:value={f}
-			on:change={(e) => {
+			on:keyup={(e) => {
 				ch = Number(((f - 32) * (25 / 17)).toFixed(1));
 				c = Number(((f - 32) / 1.8).toFixed(1));
 			}}
